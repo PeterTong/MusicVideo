@@ -13,6 +13,8 @@
 		1210C70E1D1E581D002497A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1210C70D1D1E581D002497A1 /* Assets.xcassets */; };
 		1210C7111D1E581D002497A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1210C70F1D1E581D002497A1 /* LaunchScreen.storyboard */; };
 		1210C71D1D1E6AA4002497A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C71C1D1E6AA4002497A1 /* APIManager.swift */; };
+		1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C71F1D1EDF3A002497A1 /* Constants.swift */; };
+		1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7211D1EE0FF002497A1 /* MusicVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1210C7101D1E581D002497A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1210C7121D1E581D002497A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1210C71C1D1E6AA4002497A1 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1210C71F1D1EDF3A002497A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1210C7211D1EE0FF002497A1 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		1210C7051D1E581D002497A1 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				1210C71E1D1EDF1E002497A1 /* Utils */,
 				1210C71B1D1E6632002497A1 /* Supporting files */,
 				1210C71A1D1E662A002497A1 /* Model */,
 				1210C7191D1E6623002497A1 /* VIew */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1210C71C1D1E6AA4002497A1 /* APIManager.swift */,
+				1210C7211D1EE0FF002497A1 /* MusicVideo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -97,6 +103,14 @@
 				1210C7121D1E581D002497A1 /* Info.plist */,
 			);
 			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		1210C71E1D1EDF1E002497A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1210C71F1D1EDF3A002497A1 /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +187,9 @@
 			files = (
 				1210C71D1D1E6AA4002497A1 /* APIManager.swift in Sources */,
 				1210C7091D1E581D002497A1 /* ViewController.swift in Sources */,
+				1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */,
 				1210C7071D1E581D002497A1 /* AppDelegate.swift in Sources */,
+				1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
