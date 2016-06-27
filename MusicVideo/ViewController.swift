@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  var videos = [Videos]()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,17 +22,30 @@ class ViewController: UIViewController {
     
   }
 
-  func didLoadData(result: String){
-    print(result)
+  func didLoadData(videos: [Videos]){
     
-    let alert = UIAlertController(title: (result), message: nil, preferredStyle: .Alert)
+    self.videos = videos // put the parameter videos into our variable videos
     
-    let okAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
-      //do something if you want
+    for item in videos {
+      print("name = \(item.vReleaseDate)")
     }
     
-    alert.addAction(okAction)
-    self.presentViewController(alert, animated: true, completion: nil)
+    // if you want to have a index value of the array, you should do this way
+    for (index, item) in videos.enumerate() {
+      print("\(index) name = \(item.vName)")
+    }
+    
+    
+    //        for i in 0..<videos.count {
+    //            let video = videos[i]
+    //            print("\(i) name = \(video.vName)")
+    //        }
+    
+    //        for var i = 0; i < videos.count; i++ {
+    //            let video = videos[i]
+    //            print("\(i) name = \(video.vName)")
+    //        }
+    
   }
 
 
