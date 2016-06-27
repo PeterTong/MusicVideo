@@ -15,6 +15,7 @@
 		1210C71D1D1E6AA4002497A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C71C1D1E6AA4002497A1 /* APIManager.swift */; };
 		1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C71F1D1EDF3A002497A1 /* Constants.swift */; };
 		1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7211D1EE0FF002497A1 /* MusicVideo.swift */; };
+		1210C7271D20D899002497A1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7261D20D899002497A1 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		1210C71C1D1E6AA4002497A1 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1210C71F1D1EDF3A002497A1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1210C7211D1EE0FF002497A1 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		1210C7241D20D898002497A1 /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
+		1210C7251D20D899002497A1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1210C7261D20D899002497A1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		1210C7051D1E581D002497A1 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				1210C7231D20D86F002497A1 /* Obj-c */,
 				1210C71E1D1EDF1E002497A1 /* Utils */,
 				1210C71B1D1E6632002497A1 /* Supporting files */,
 				1210C71A1D1E662A002497A1 /* Model */,
@@ -111,6 +116,16 @@
 				1210C71F1D1EDF3A002497A1 /* Constants.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		1210C7231D20D86F002497A1 /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				1210C7251D20D899002497A1 /* Reachability.h */,
+				1210C7261D20D899002497A1 /* Reachability.m */,
+				1210C7241D20D898002497A1 /* MusicVideo-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +204,7 @@
 				1210C7091D1E581D002497A1 /* ViewController.swift in Sources */,
 				1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */,
 				1210C7071D1E581D002497A1 /* AppDelegate.swift in Sources */,
+				1210C7271D20D899002497A1 /* Reachability.m in Sources */,
 				1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,11 +320,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwpetertong.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -316,11 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwpetertong.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
 			};
 			name = Release;
 		};
