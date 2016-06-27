@@ -24,10 +24,12 @@ class ViewController: UIViewController {
 
   func didLoadData(videos: [Videos]){
     
+    print(reachabilityStatus)
+    
     self.videos = videos // put the parameter videos into our variable videos
     
     for item in videos {
-      print("name = \(item.vReleaseDate)")
+      print("name = \(item.vName)")
     }
     
     // if you want to have a index value of the array, you should do this way
