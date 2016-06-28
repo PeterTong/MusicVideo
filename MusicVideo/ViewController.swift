@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
   var videos = [Videos]()
 
   @IBOutlet weak var displatLabel: UILabel!
+  @IBOutlet weak var tableView: UITableView!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -28,6 +31,9 @@ class ViewController: UIViewController {
     // When "ReachStatusChanged" in Push Notification method is changed , then will call the function reachabilityStatusChanged
     
     reachabilityStatusChanged()
+    
+    tableView.dataSource = self
+    tableView.delegate = self
   }
 
   func reachabilityStatusChanged(){
@@ -65,6 +71,8 @@ class ViewController: UIViewController {
     }
     
     
+    tableView.reloadData()
+    
     //        for i in 0..<videos.count {
     //            let video = videos[i]
     //            print("\(i) name = \(video.vName)")
@@ -76,7 +84,29 @@ class ViewController: UIViewController {
     //        }
     
   }
+  
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
+  }
 
-
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return videos.count
+    
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCellWithIdentifier("cell",forIndexPath: indexPath)
+    
+    let video = videos[indexPath.row]
+    
+    cell.textLabel?.text = ("\(indexPath.row + 1)")
+    
+    cell.detailTextLabel?.text = video.vName
+    
+    return cell
+    
+    
+  }
 }
 

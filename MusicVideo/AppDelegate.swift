@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internetCheck = Reachability.reachabilityForInternetConnection()
     internetCheck?.startNotifier() // this is run loop , keep checking internet ,notification change
     
+    statusChangedWithReachability(internetCheck!)
+    // Debug tip 
+    //1 Add Exception breakpoint 
+    //2 Conditional breakpoint
    
     
     return true
