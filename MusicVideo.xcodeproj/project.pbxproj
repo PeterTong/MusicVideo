@@ -17,6 +17,7 @@
 		1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7211D1EE0FF002497A1 /* MusicVideo.swift */; };
 		1210C7271D20D899002497A1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7261D20D899002497A1 /* Reachability.m */; };
 		12C6E3EB1D22A9E0004D24AE /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6E3EA1D22A9E0004D24AE /* MusicVideoTVC.swift */; };
+		12C6E3ED1D23A15B004D24AE /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6E3EC1D23A15B004D24AE /* MusicVideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1210C7251D20D899002497A1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1210C7261D20D899002497A1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		12C6E3EA1D22A9E0004D24AE /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
+		12C6E3EC1D23A15B004D24AE /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				1210C70F1D1E581D002497A1 /* LaunchScreen.storyboard */,
 				1210C70A1D1E581D002497A1 /* Main.storyboard */,
+				12C6E3EC1D23A15B004D24AE /* MusicVideoTableViewCell.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				1210C71D1D1E6AA4002497A1 /* APIManager.swift in Sources */,
 				1210C7091D1E581D002497A1 /* ViewController.swift in Sources */,
 				1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */,
+				12C6E3ED1D23A15B004D24AE /* MusicVideoTableViewCell.swift in Sources */,
 				1210C7071D1E581D002497A1 /* AppDelegate.swift in Sources */,
 				1210C7271D20D899002497A1 /* Reachability.m in Sources */,
 				1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */,

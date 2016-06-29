@@ -34,7 +34,7 @@ class MusicVideoTVC: UITableViewController {
   func reachabilityStatusChanged(){
     switch reachabilityStatus {
     case NOACCESS :
-      view.backgroundColor = UIColor.redColor()
+      //view.backgroundColor = UIColor.redColor()
       // move back to Main Queue
       // if not do that, it will pop up a warning said "Presenting View controllers on detached view controllers is discouraged
       dispatch_async(dispatch_get_main_queue()) {
@@ -64,7 +64,7 @@ class MusicVideoTVC: UITableViewController {
         self.presentViewController(alert, animated: true, completion: nil)
       }
         default:
-        view.backgroundColor = UIColor.greenColor()
+        //view.backgroundColor = UIColor.greenColor()
         // To make sure run the API one time ,to make the code more smart
         if videos.count > 0 {
           print("do not refresh API")
@@ -81,7 +81,7 @@ class MusicVideoTVC: UITableViewController {
     //Call API
     let api = APIManager()
     
-    api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
+    api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json", completion: didLoadData)
   }
   
   
@@ -134,17 +134,18 @@ class MusicVideoTVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return videos.count
     }
-
+  
+  private struct storyboard{
+    static let cellReuseIdentifier = "cell"
+  }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
 
         // Configure the cell...
-      let video = videos[indexPath.row]
+      cell.video = videos[indexPath.row]
       
-      cell.textLabel?.text = ("\(indexPath.row + 1)")
       
-      cell.detailTextLabel?.text = video.vName
 
         return cell
     }
