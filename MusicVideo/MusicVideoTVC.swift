@@ -26,9 +26,17 @@ class MusicVideoTVC: UITableViewController {
     
     // When "ReachStatusChanged" in Push Notification method is changed , then will call the function reachabilityStatusChanged
     
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(preferredFontChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)// This is a way to viewcontroller for observer font size changed 
+    
     reachabilityStatusChanged()
     
   
+  }
+  
+  func preferredFontChange(){
+    
+    print("The preferred font is changed")
   }
   
   func reachabilityStatusChanged(){
@@ -89,6 +97,8 @@ class MusicVideoTVC: UITableViewController {
   deinit
   {
     NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+    
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification,object: nil)
   }
   
   

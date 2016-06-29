@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="musicTitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-Ja-YTg">
-                                            <rect key="frame" x="166" y="47" width="420" height="76"/>
+                                            <rect key="frame" x="166" y="46" width="420" height="77"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="115" id="FJz-Zr-67E"/>
                                                 <constraint firstAttribute="width" constant="192" id="r7n-cw-Nye"/>
-                                                <constraint firstAttribute="width" constant="150" id="t0q-Ii-j7Z"/>
+                                                <constraint firstAttribute="width" constant="150" id="zgR-c6-PNt"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -43,14 +43,14 @@
                                             </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-Vt-JZC">
-                                            <rect key="frame" x="166" y="15" width="42" height="24"/>
+                                            <rect key="frame" x="166" y="18" width="48" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="Oji-kZ-vxT"/>
                                                 <constraint firstAttribute="height" constant="24" id="RGp-71-LX5"/>
-                                                <constraint firstAttribute="width" constant="42" id="RIw-7g-iR8"/>
-                                                <constraint firstAttribute="height" constant="24" id="tdv-ZB-Ab0"/>
+                                                <constraint firstAttribute="height" constant="26" id="T3d-aU-bW3"/>
+                                                <constraint firstAttribute="width" constant="48" id="hWs-4S-A5w"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -63,19 +63,19 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="top" secondItem="s8E-4d-dEW" secondAttribute="topMargin" id="04v-bh-XYR"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="nBL-Ja-YTg" secondAttribute="trailing" constant="11" id="2RQ-6T-wly"/>
-                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="top" secondItem="s8E-4d-dEW" secondAttribute="topMargin" constant="7" id="3PN-cI-tAx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="nBL-Ja-YTg" secondAttribute="trailing" constant="6" id="6PM-qQ-4Yk"/>
-                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="leading" secondItem="a4i-XP-yfm" secondAttribute="trailing" constant="8" symbolic="YES" id="Bvv-68-0Hv"/>
-                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="bottom" secondItem="nBL-Ja-YTg" secondAttribute="bottom" id="FrS-nM-QHo"/>
+                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="leading" secondItem="nBL-Ja-YTg" secondAttribute="leading" id="3MJ-rp-uAH"/>
                                         <constraint firstItem="nBL-Ja-YTg" firstAttribute="top" secondItem="c9Y-Vt-JZC" secondAttribute="bottom" constant="8" symbolic="YES" id="H4f-Mc-ZMb"/>
-                                        <constraint firstItem="nBL-Ja-YTg" firstAttribute="top" secondItem="c9Y-Vt-JZC" secondAttribute="bottom" constant="8" symbolic="YES" id="TGb-gr-uw5"/>
+                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="leading" secondItem="s8E-4d-dEW" secondAttribute="leadingMargin" id="Opr-IY-WKr"/>
+                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="leading" secondItem="a4i-XP-yfm" secondAttribute="trailing" constant="8" symbolic="YES" id="Qu4-On-NgL"/>
+                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="bottom" secondItem="nBL-Ja-YTg" secondAttribute="bottom" id="RIB-bT-svO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nBL-Ja-YTg" secondAttribute="trailing" constant="6" id="RdU-Ox-eHu"/>
                                         <constraint firstItem="nBL-Ja-YTg" firstAttribute="trailing" secondItem="c9Y-Vt-JZC" secondAttribute="trailing" id="YHJ-La-gfQ"/>
+                                        <constraint firstItem="nBL-Ja-YTg" firstAttribute="top" secondItem="c9Y-Vt-JZC" secondAttribute="bottom" constant="2" id="Zf6-cs-0RI"/>
+                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="top" secondItem="s8E-4d-dEW" secondAttribute="topMargin" id="bLX-wW-W7p"/>
                                         <constraint firstItem="a4i-XP-yfm" firstAttribute="centerY" secondItem="s8E-4d-dEW" secondAttribute="centerY" id="ear-Am-Gb1"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="a4i-XP-yfm" secondAttribute="bottom" constant="5.5" id="j1n-Hp-v2L"/>
-                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="leading" secondItem="nBL-Ja-YTg" secondAttribute="leading" id="kSm-i2-OKs"/>
-                                        <constraint firstItem="a4i-XP-yfm" firstAttribute="leading" secondItem="s8E-4d-dEW" secondAttribute="leadingMargin" id="nrL-Qu-8Az"/>
+                                        <constraint firstItem="c9Y-Vt-JZC" firstAttribute="top" secondItem="s8E-4d-dEW" secondAttribute="topMargin" constant="10" id="hlE-eh-l7z"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="a4i-XP-yfm" secondAttribute="bottom" constant="5.5" id="ipY-e0-keI"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
