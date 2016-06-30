@@ -90,7 +90,7 @@
                                     <outlet property="musicImage" destination="a4i-XP-yfm" id="bj0-W0-G2Z"/>
                                     <outlet property="musicTitle" destination="nBL-Ja-YTg" id="3k6-eY-kK8"/>
                                     <outlet property="rank" destination="c9Y-Vt-JZC" id="6Yf-Xw-FPA"/>
-                                    <segue destination="mTk-QJ-JMv" kind="show" id="4EB-Nv-ARw"/>
+                                    <segue destination="mTk-QJ-JMv" kind="show" identifier="musicDetail" id="4EB-Nv-ARw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -186,6 +186,13 @@
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <connections>
+                        <outlet property="vGenre" destination="7RT-CT-s6c" id="AxP-5T-y3O"/>
+                        <outlet property="vName" destination="0m2-i9-VQD" id="PkI-un-0vZ"/>
+                        <outlet property="vPrice" destination="fwi-5p-MdV" id="N1e-jr-9dA"/>
+                        <outlet property="vRights" destination="jCf-W3-cLs" id="NS2-4g-bL7"/>
+                        <outlet property="videoImage" destination="ZsH-Di-XYa" id="AVK-zb-046"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEl-zL-U1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
