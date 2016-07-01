@@ -99,6 +99,11 @@
                             <outlet property="delegate" destination="IMa-tc-4yh" id="Ak3-0g-ix7"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem image="setting" id="etT-4k-art">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="Ype-gV-n8s"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eG6-NK-f7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +153,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCf-W3-cLs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCf-W3-cLs">
                                 <rect key="frame" x="1" y="458" width="599" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="8Ly-Rn-VBf"/>
@@ -164,18 +169,59 @@
                             <constraint firstItem="0m2-i9-VQD" firstAttribute="top" secondItem="Foc-d9-2Bb" secondAttribute="bottom" id="4sQ-VL-Gq4"/>
                             <constraint firstItem="0m2-i9-VQD" firstAttribute="leading" secondItem="Xdf-Mp-rrL" secondAttribute="leadingMargin" constant="-13" id="98s-c5-U4T"/>
                             <constraint firstItem="7RT-CT-s6c" firstAttribute="centerY" secondItem="fwi-5p-MdV" secondAttribute="centerY" id="9Qg-1x-U48"/>
+                            <constraint firstAttribute="trailing" secondItem="ZsH-Di-XYa" secondAttribute="trailing" id="CVr-jo-dyW"/>
                             <constraint firstItem="7RT-CT-s6c" firstAttribute="leading" secondItem="Xdf-Mp-rrL" secondAttribute="leadingMargin" id="Dg9-Zy-lhz"/>
+                            <constraint firstItem="ZsH-Di-XYa" firstAttribute="centerX" secondItem="Xdf-Mp-rrL" secondAttribute="centerX" id="Hy7-t2-thg"/>
                             <constraint firstItem="jCf-W3-cLs" firstAttribute="bottom" secondItem="rHt-F1-onW" secondAttribute="top" id="IAL-j9-mz0"/>
                             <constraint firstItem="0m2-i9-VQD" firstAttribute="centerX" secondItem="Xdf-Mp-rrL" secondAttribute="centerX" id="cRv-iE-a47"/>
+                            <constraint firstItem="ZsH-Di-XYa" firstAttribute="bottom" secondItem="rHt-F1-onW" secondAttribute="top" id="dh7-8t-uYF"/>
                             <constraint firstItem="0m2-i9-VQD" firstAttribute="centerX" secondItem="ZsH-Di-XYa" secondAttribute="centerX" id="f3H-Kv-fHV"/>
                             <constraint firstAttribute="trailing" secondItem="ZsH-Di-XYa" secondAttribute="trailing" id="fCu-sj-aEn"/>
                             <constraint firstItem="ZsH-Di-XYa" firstAttribute="trailing" secondItem="jCf-W3-cLs" secondAttribute="trailing" id="fgA-XF-hZR"/>
                             <constraint firstItem="fwi-5p-MdV" firstAttribute="trailing" secondItem="Xdf-Mp-rrL" secondAttribute="trailingMargin" id="guV-xs-qff"/>
+                            <constraint firstItem="ZsH-Di-XYa" firstAttribute="top" secondItem="Foc-d9-2Bb" secondAttribute="bottom" id="jII-HL-P1g"/>
                             <constraint firstItem="7RT-CT-s6c" firstAttribute="baseline" secondItem="fwi-5p-MdV" secondAttribute="baseline" id="jQF-om-7BR"/>
                             <constraint firstItem="ZsH-Di-XYa" firstAttribute="top" secondItem="Foc-d9-2Bb" secondAttribute="bottom" constant="68" id="uaH-mV-xg2"/>
                             <constraint firstItem="jCf-W3-cLs" firstAttribute="top" secondItem="7RT-CT-s6c" secondAttribute="bottom" constant="8" symbolic="YES" id="y09-S1-2yv"/>
                             <constraint firstItem="7RT-CT-s6c" firstAttribute="top" secondItem="ZsH-Di-XYa" secondAttribute="bottom" constant="1" id="ytk-b3-qBT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CVr-jo-dyW"/>
+                                <exclude reference="Hy7-t2-thg"/>
+                                <exclude reference="dh7-8t-uYF"/>
+                                <exclude reference="jII-HL-P1g"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="0m2-i9-VQD"/>
+                                <exclude reference="7RT-CT-s6c"/>
+                                <exclude reference="fwi-5p-MdV"/>
+                                <exclude reference="jCf-W3-cLs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4sQ-VL-Gq4"/>
+                                <exclude reference="98s-c5-U4T"/>
+                                <exclude reference="cRv-iE-a47"/>
+                                <exclude reference="f3H-Kv-fHV"/>
+                                <exclude reference="3Cd-j7-Fsr"/>
+                                <include reference="CVr-jo-dyW"/>
+                                <include reference="Hy7-t2-thg"/>
+                                <include reference="dh7-8t-uYF"/>
+                                <exclude reference="fCu-sj-aEn"/>
+                                <exclude reference="fgA-XF-hZR"/>
+                                <include reference="jII-HL-P1g"/>
+                                <exclude reference="uaH-mV-xg2"/>
+                                <exclude reference="9Qg-1x-U48"/>
+                                <exclude reference="Dg9-Zy-lhz"/>
+                                <exclude reference="jQF-om-7BR"/>
+                                <exclude reference="ytk-b3-qBT"/>
+                                <exclude reference="IAL-j9-mz0"/>
+                                <exclude reference="y09-S1-2yv"/>
+                                <exclude reference="guV-xs-qff"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="Izx-x5-vxk">
@@ -196,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEl-zL-U1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="358"/>
+            <point key="canvasLocation" x="2431" y="357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bky-9D-8go">
@@ -221,4 +267,7 @@
             <point key="canvasLocation" x="966" y="358"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="setting" width="22" height="22"/>
+    </resources>
 </document>
