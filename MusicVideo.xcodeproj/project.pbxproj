@@ -16,6 +16,7 @@
 		1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C71F1D1EDF3A002497A1 /* Constants.swift */; };
 		1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7211D1EE0FF002497A1 /* MusicVideo.swift */; };
 		1210C7271D20D899002497A1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210C7261D20D899002497A1 /* Reachability.m */; };
+		1225C1171D36050300AFA11C /* SettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1225C1161D36050300AFA11C /* SettingTVC.swift */; };
 		12C55C7A1D2406F400B0EDA6 /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C55C791D2406F400B0EDA6 /* MusicVideoDetailVC.swift */; };
 		12C6E3EB1D22A9E0004D24AE /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6E3EA1D22A9E0004D24AE /* MusicVideoTVC.swift */; };
 		12C6E3ED1D23A15B004D24AE /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6E3EC1D23A15B004D24AE /* MusicVideoTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		1210C7241D20D898002497A1 /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1210C7251D20D899002497A1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1210C7261D20D899002497A1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1225C1161D36050300AFA11C /* SettingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTVC.swift; sourceTree = "<group>"; };
 		12C55C791D2406F400B0EDA6 /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
 		12C6E3EA1D22A9E0004D24AE /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
 		12C6E3EC1D23A15B004D24AE /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				1210C7081D1E581D002497A1 /* ViewController.swift */,
 				12C6E3EA1D22A9E0004D24AE /* MusicVideoTVC.swift */,
 				12C55C791D2406F400B0EDA6 /* MusicVideoDetailVC.swift */,
+				1225C1161D36050300AFA11C /* SettingTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				1210C7221D1EE0FF002497A1 /* MusicVideo.swift in Sources */,
 				12C6E3ED1D23A15B004D24AE /* MusicVideoTableViewCell.swift in Sources */,
 				1210C7071D1E581D002497A1 /* AppDelegate.swift in Sources */,
+				1225C1171D36050300AFA11C /* SettingTVC.swift in Sources */,
 				1210C7271D20D899002497A1 /* Reachability.m in Sources */,
 				1210C7201D1EDF3A002497A1 /* Constants.swift in Sources */,
 				12C6E3EB1D22A9E0004D24AE /* MusicVideoTVC.swift in Sources */,
