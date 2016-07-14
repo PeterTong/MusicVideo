@@ -46,6 +46,7 @@ class MusicVideoDetailVC: UIViewController {
 	}
 	
 	@IBAction func socialMedia(sender: UIBarButtonItem) {
+		
 		shareMedia()
 		
 		

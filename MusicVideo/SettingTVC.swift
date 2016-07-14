@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingTVC: UITableViewController {
+class SettingTVC: UITableViewController,MFMailComposeViewControllerDelegate {
 	
 	@IBOutlet weak var aboutDisplay: UILabel!
 	
@@ -78,6 +79,68 @@ class SettingTVC: UITableViewController {
 		APICnt.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		numberOfVideoDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		dragTheSliderDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+	}
+	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		
+		if indexPath.row == 1 && indexPath.section == 0 {
+			
+			let mailComposeViewController = configureMail()
+			
+			if MFMailComposeViewController.canSendMail() {
+				
+				self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+			}else{
+				//no email setup on iPhone
+				mailAlert()
+			}
+			
+			tableView.deselectRowAtIndexPath(indexPath, animated: true)
+			
+		}
+	}
+	
+	func configureMail() -> MFMailComposeViewController{
+		
+		let mailComposeVC = MFMailComposeViewController()
+		mailComposeVC.mailComposeDelegate = self
+		mailComposeVC.setToRecipients(["tkwpeter21@gmail.com"])
+		mailComposeVC.setSubject("Music Video App Feedback")
+		mailComposeVC.setMessageBody("Hi Peter,\n\n  I would like to share the following feedback...\n", isHTML: false)
+		return mailComposeVC
+	}
+	
+	func mailAlert() {
+		
+		let alertController = UIAlertController(title: "Alert", message: "No e-Mail Account setup in your device", preferredStyle: .Alert)
+		
+		let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+			
+			// do something if you want
+		}
+		
+		alertController.addAction(okAction)
+		
+		self.presentViewController(alertController, animated: true, completion: nil)
+	}
+	
+	func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+		
+		switch result.rawValue {
+		case MFMailComposeResultCancelled.rawValue:
+			print("Mail cancelled")
+		case MFMailComposeResultSaved.rawValue:
+			print("Mail saved")
+		case MFMailComposeResultSent.rawValue:
+			print("Mail sent")
+		case MFMailComposeResultFailed.rawValue:
+			print("Mail Failed")
+			
+		default:
+			print("Unknown issue")
+		}
+		
+		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 	deinit
