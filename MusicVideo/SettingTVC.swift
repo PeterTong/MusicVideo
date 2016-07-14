@@ -25,6 +25,10 @@ class SettingTVC: UITableViewController {
 	
 	@IBOutlet weak var sliderCnt: UISlider!
 	
+	@IBOutlet weak var numberOfVideoDisplay: UILabel!
+	
+	@IBOutlet weak var dragTheSliderDisplay: UILabel!
+	
 	
 	
 	override func viewDidLoad() {
@@ -72,6 +76,8 @@ class SettingTVC: UITableViewController {
 		securityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		bestImageDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		APICnt.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+		numberOfVideoDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+		dragTheSliderDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
 	}
 	
 	deinit

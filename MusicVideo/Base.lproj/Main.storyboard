@@ -286,7 +286,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="D76-Ea-njv"/>
                                                         <constraint firstAttribute="width" constant="263" id="kLe-c3-6SR"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -312,7 +312,9 @@
                         <outlet property="APICnt" destination="gic-Rc-nQN" id="LxG-Dh-iRM"/>
                         <outlet property="aboutDisplay" destination="zQK-Mg-zgx" id="8Xw-A1-EhB"/>
                         <outlet property="bestImageDisplay" destination="5VL-Mt-0lq" id="Ida-iv-q8p"/>
+                        <outlet property="dragTheSliderDisplay" destination="LTy-gK-Giw" id="crL-JM-c3b"/>
                         <outlet property="feedbackDisplay" destination="711-2b-iXg" id="RV3-Ux-Dgj"/>
+                        <outlet property="numberOfVideoDisplay" destination="owc-Q6-gxH" id="W65-VE-PDo"/>
                         <outlet property="securityDisplay" destination="hnz-mh-1mQ" id="JFJ-IY-HdL"/>
                         <outlet property="sliderCnt" destination="ZR5-wY-1AQ" id="Ctx-WP-ACj"/>
                         <outlet property="touchID" destination="OxG-LL-Isv" id="zO3-WS-4mT"/>
@@ -445,6 +447,9 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Sgx-M8-slq"/>
                         <barButtonItem systemItem="action" id="0v3-tK-A10">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="socialMedia:" destination="mTk-QJ-JMv" id="SZ8-s0-DlB"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <connections>
