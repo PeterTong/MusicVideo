@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController {
+class MusicVideoTVC: UITableViewController,UISearchResultsUpdating {
 	
 	var videos = [Videos]()
 	
@@ -309,8 +309,26 @@ class MusicVideoTVC: UITableViewController {
 	}
 	
 	
+	//other way to search filter string 
+	func updateSearchResultsForSearchController(searchController: UISearchController) {
+		
+		if let searchText = searchController.searchBar.text {
+			filterContentForSearchText(searchText)
+			tableView.reloadData()
+		}
+	}
 	
-	
+	func filterContentForSearchText(searchText:String){
+		filterSearch = videos.filter({ (videos) -> Bool in
+			let artistMatch = videos.vArtist.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+			let nameMatch = videos.vName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+			let rankMatch = "\(videos.vRank)".rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+			
+			return artistMatch != nil || nameMatch != nil || rankMatch != nil
+			
+			
+		})
+	}
 	
 }
 //
