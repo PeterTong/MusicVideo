@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController {
+class MusicVideoTVC: UITableViewController,UISearchResultsUpdating {
 	
 	var videos = [Videos]()
 	
@@ -163,7 +163,7 @@ class MusicVideoTVC: UITableViewController {
 		
 		//Setup the Search Controller 
 		
-//		resultSearchController.searchResultsUpdater = self
+		resultSearchController.searchResultsUpdater = self
 		
 		definesPresentationContext = true
 		
@@ -291,6 +291,21 @@ class MusicVideoTVC: UITableViewController {
 		
 		// Get the new view controller using segue.destinationViewController.
 		// Pass the selected object to the new view controller.
+	}
+	
+	func updateSearchResultsForSearchController(searchController: UISearchController) {
+		searchController.searchBar.text?.lowercaseString
+		filterSearch(searchController.searchBar.text!)
+	}
+	
+	func filterSearch(searchText:String){
+		
+		filterSearch = videos.filter({ videos  in
+			return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+		})
+		
+		tableView.reloadData()
+		
 	}
 	
 	
